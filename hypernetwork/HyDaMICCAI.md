@@ -115,8 +115,10 @@ Validation failed: Key 'encoder.init_args.activation' is not expected
 ## 3.3 finetune and evalute
 代码库里没有测试代码，让gpt生成了一个
 ## 3.4 Results
-指标为AUC，越高越好，target domain为NIH
+指标为AUC，越高越好，target domain为NIH  
 |      | 类别一 | 类别二 | 类别三 | 类别四 | 类别五 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 本文 | 0.68 | 0.89 | 0.75 | 0.88 | 0.79 |
-| 我的 | 0.447 | 0.4963 | 0.5954 | 0.4997 | 0.5137 |
+| 我的 | 0.447 | 0.4963 | 0.5954 | 0.4997 | 0.5137 |  
+
+![](../pictures/48d7d298-76d8-479f-a99f-09c63dfaee9a.png)
