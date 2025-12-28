@@ -282,6 +282,7 @@ python train_net.py --eval-only --config configs/test_segment.yaml \
 解决方法：把学习率根据GPU数量改一下，patch的大小改成原文用的其他文献中的大小
 ## 3.4 Results
 指标为Dice score (DSC, %)， Emax(一个论文提出的)， Sα(一个论文提出的)，越高越好  
-![](../pictures/68614a73-15ba-400c-bd0c-9896b29dceeb.jpg)
+![](../pictures/68614a73-15ba-400c-bd0c-9896b29dceeb.jpg)  
+![](../pictures/601d4f0e-7c8e-4ef0-9450-0c296887b0bb.png)
 
 
