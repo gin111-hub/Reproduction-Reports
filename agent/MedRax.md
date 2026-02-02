@@ -217,5 +217,5 @@ python /root/autodl-tmp/MedRAX-main/vval.py medrax_log.json
 ![](../pictures/9285a428-f7c5-4540-86bb-fb6392bb5d9b.png)
 
 ## web复现
-[▶ Click here to watch the demo video](agent/2026-02-02_222639_180.mp4)  
+[▶ Click here to watch the demo video](2026-02-02_222639_180.mp4)  
 报错：库版本问题，尝试多个版本后成功
