@@ -215,3 +215,6 @@ python /root/autodl-tmp/MedRAX-main/vval.py medrax_log.json
 | accuracy | 63.1% | 72.12% |  
 
 ![](../pictures/9285a428-f7c5-4540-86bb-fb6392bb5d9b.png)
+
+## web复现
+[▶ Click here to watch the demo video](assets/demo.mp4)
