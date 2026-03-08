@@ -48,43 +48,7 @@ IXI的T1MRI，MRI数据，3D，一共18GB,NIFTI格式
 ### IXI
 http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar
 ## 报错
-### 3.1.1
-```
-问题：polyp标注数大于图片数，但一个图片应该只有一个标注
-原因：(ttdg) root@autodl-container-0fc04ca4ba-2313fd84:~/autodl-tmp# 
-python /root/autodl-tmp/plpolypdajs.py unique pixel values: 
-[ 0 1 2 3 4 5 6 7 8 248 249 250 251 252 253 254 255] connected components (excluding bg): 1 findContours returned: 1
-掩码不是纯黑白二值图，而是被保存成了灰度渐变或者有轻微压缩误差的图像（比如 JPEG 保存过、或者 PNG 压缩出了一堆伪像）。
 
-解决方法：强行二值化
-mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
-mask = np.where(mask > 128, 255, 0).astype(np.uint8)
-```
-### 3.1.2
-```
-问题:
-fundus的标注数量应该是图片数量两倍，但是多很多
-
-原因：把很小的连通区域也标进去了
-
-解决方法：
-忽略小碎片
-num_labels, labels = cv2.connectedComponents(binm)
-area_thresh = binm.size * 0.001  # 小于0.1%像素面积的忽略
-counts = 0
-for i in range(1, num_labels):
-    if np.sum(labels == i) >= area_thresh:
-        counts += 1
-
-```
-```
-问题：
-Assertion `t >= 0 && t < n_classes` failed
-标签和模型输出类别数不匹配
-
-解决方法：
-验证集设置错误，改一下验证集
-```
 ```
 问题：
 ValueError: Does not validate against any of the Union subtypes
